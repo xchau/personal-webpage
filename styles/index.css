@@ -20,6 +20,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 main {
@@ -31,16 +32,17 @@ main {
 }
 
 #nav-container {
-  /*border-bottom: 2px solid #606060;*/
   display: flex;
   justify-content: space-between;
-  padding-top: 5px;
-  margin-bottom: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
   width: 80%;
 }
 
 #name-box {
+  /*align-items: flex-end;*/
   display: flex;
+
 }
 
 #name-box .name {
@@ -51,7 +53,6 @@ main {
 
 #link-box {
   align-items: flex-end;
-  /*border: 1px solid black;*/
   display: flex;
   justify-content: flex-end;
 }
@@ -61,39 +62,36 @@ main {
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 65%;
   justify-content: center;
   width: 100%;
 }
 
 #contact-section {
   align-items: center;
-  /*border: 1px solid black;*/
   display: flex;
   height: 30%;
   justify-content: space-around;
   width: 40%;
 }
 
-/*#profile-pic {
-  background: url("../assets/img/profile-pic.jpg");
-  background-position: left;
-  background-size: cover;
-  border-radius: 50%;
-  height: 13rem;
-  width: 13rem;
-}*/
-
 .text {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
+.option-box {
+  display: flex;
+  justify-content: center;
+  margin: 0px 6px;
+  width: 65px;
+}
+
 .option {
-  /*border: 1px solid black;*/
-  font-family: opensans, Helvetica Neue, sans-serif;
-  margin: 0px 12px;
+  color: #000;
   border-bottom: 2px solid #fff;
+  font-family: opensans, Helvetica Neue, sans-serif;
+  text-decoration: none;
 }
 
 .active {
@@ -108,4 +106,55 @@ main {
 .contact-logo {
   height: 2rem;
   width: 2rem;
+}
+
+.email, .phone {
+  height: 2.1rem;
+  width: 2.1rem;
+}
+
+.email:hover, .phone:hover {
+  cursor: pointer;
+}
+
+.email-box, .phone-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* TOOLTIP STYLES */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+  visibility: hidden;
+}
+
+.tooltip {
+  align-items: center;
+  background-color: #ed6675;
+  border-radius: 4px;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  position: absolute;
+  top: 38px;
+  width: 62px;
 }

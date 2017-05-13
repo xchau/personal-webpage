@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  function copyText(text) {
+  function copyText(text, cls) {
     const textArea = document.createElement("textarea");
 
     textArea.style.position = 'fixed';
@@ -20,28 +20,43 @@
 
     textArea.select();
 
-    try {
-      const successful = document.execCommand('copy');
-      const msg = successful ? 'successful' : 'unsuccessful';
-
-      console.log('Copied ' + msg);
-    }
-    catch (err) {
-      console.log('Cannot copy');
-    }
-
     document.body.removeChild(textArea);
   }
 
+  function createToolTip(elem) {
+    const parent = document.querySelector(elem);
+    const tooltip = document.createElement('div');
+    const span = document.createElement('span');
 
-  const copyEmail = document.querySelector('.email');
+    tooltip.classList.add('tooltip', 'fade-in');
+
+    span.innerText = 'Copied';
+    span.style.color = '#fff';
+    span.style.fontFamily = 'opensans-light';
+    span.style.fontSize = '14px';
+
+    tooltip.appendChild(span);
+    parent.appendChild(tooltip);
+
+    setTimeout(() => {
+      tooltip.classList.remove('fade-in');
+      tooltip.classList.add('fade-out');
+      console.log(tooltip);
+    }, 1000);
+  }
+
+  // const copyEmail = document.querySelector('.email');
   const copyPhone = document.querySelector('.phone');
 
-  copyEmail.addEventListener('click', () => {
-    copyText('xiu.chau@gmail.com');
-  });
+  // copyEmail.addEventListener('click', () => {
+  //   copyText('xiu.chau@gmail.com');
+  //
+  //   createToolTip('.email-box');
+  // });
 
   copyPhone.addEventListener('click', () => {
     copyText('206-607-7138');
+
+    createToolTip('.phone-box')
   });
 })();

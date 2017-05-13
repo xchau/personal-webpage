@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#summary-container, #skills-container, #edu-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+#summary-container {
+  background: url('../assets/img/cover-photo.jpg');
+  background-size: cover;
+  height: 50%;
+}
+
+#summary-container p {
+  color: #fff;
+  font-family: opensans-light, Helvetica Neue, sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: center;
+  width: 70%;
+}
+
+#skills-container p, #edu-container p {
+  font-family: opensans-light, Helvetica Neue, sans-serif;
+  font-size: 0.9rem;
+  line-height: 2.1;
+  margin: 0;
+  text-align: center;
+}
+
+.section-header {
+  /*border-bottom: 1px solid #444;*/
+  font-family: opensans;
+  font-size: 0.9rem;
+  margin: 4px 0px;
+  text-align: center;
+}
