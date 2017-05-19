@@ -142,12 +142,6 @@ main {
 	/*margin-bottom: 10px;*/
   width: 80%;
 }
-/*
-#porfolio-grid li {
-	border: 1px solid #ed6675;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}*/
 
 .size1 {
   height: 100%;
@@ -162,13 +156,26 @@ main {
 }
 
 /* OVERLAY STYLES */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+}
+
 .project-box {
   position: relative;
 }
 
 .overlay-box {
-  display: none;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  justify-content: space-between;
   position: absolute;
   margin: 0 10%;
   top: 0;
@@ -182,45 +189,6 @@ main {
   width: 100%;
 }
 
-.project:hover + .overlay-box,
-.overlay-box:hover {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* TOOLTIP STYLES */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn .5s ease-in 1 forwards;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: visibility 0s 1s, opacity 1s linear;
-  visibility: hidden;
-}
-
-.tooltip {
-  align-items: center;
-  background-color: #ed6675;
-  border-radius: 4px;
-  display: flex;
-  height: 34px;
-  justify-content: center;
-  position: absolute;
-  top: 38px;
-  width: 62px;
+.hidden {
+  display: none;
 }
