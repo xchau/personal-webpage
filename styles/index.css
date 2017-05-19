@@ -166,23 +166,27 @@ main {
   position: relative;
 }
 
-.hidden {
-  /*display: none;*/
-}
-
-.overlay {
-  background-color: rgba(30, 30, 30, 0.75);
-  border-radius: 6px;
+.overlay-box {
   display: none;
-  height: 50px;
+  height: 100%;
   position: absolute;
   margin: 0 10%;
   top: 0;
   width: 80%;
 }
 
-.project:hover + .overlay, .overlay:hover {
-  display: inherit !important;
+.overlay-top, .overlay-bottom {
+  background-color: rgba(30, 30, 30, 0.75);
+  border-radius: 6px;
+  height: 50px;
+  width: 100%;
+}
+
+.project:hover + .overlay-box,
+.overlay-box:hover {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* TOOLTIP STYLES */
