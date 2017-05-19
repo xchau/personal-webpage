@@ -2,7 +2,7 @@
 
 (() => {
   const showOverlayOnHover = () => {
-    const projects = document.querySelectorAll('.project');
+    // const projects = document.querySelectorAll('.project');
 
     const grid = document.querySelector('#porfolio-grid');
 
@@ -17,7 +17,7 @@
 
         overlay.classList.remove('hidden');
         overlay.style.width = `${width}px`;
-        overlay.style.top = `${height / 2}px`;
+        overlay.style.top = `${height / 1.6}px`;
 
         console.log(label, height, width);
         console.log(overlay);
@@ -26,7 +26,23 @@
     })
   };
 
-  showOverlayOnHover();
+  // const hideOverlay = () => {
+  //   const grid = document.querySelector('#porfolio-grid');
+  //
+  //   grid.addEventListener('mouseout', (event) => {
+  //     const target = event.target;
+  //
+  //     if (target.nodeName === 'IMG') {
+  //       const overlay = target.nextElementSibling;
+  //       console.log(overlay);
+  //
+  //       overlay.classList.add('hidden');
+  //
+  //     }
+  //   });
+  // }
+
+  // showOverlayOnHover();
 
 
 })();

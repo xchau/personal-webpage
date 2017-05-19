@@ -173,10 +173,16 @@ main {
 .overlay {
   background-color: rgba(30, 30, 30, 0.75);
   border-radius: 6px;
-  height: 30px;
+  display: none;
+  height: 50px;
   position: absolute;
+  margin: 0 10%;
   top: 0;
-  width: 50px;
+  width: 80%;
+}
+
+.project:hover + .overlay, .overlay:hover {
+  display: inherit !important;
 }
 
 /* TOOLTIP STYLES */
