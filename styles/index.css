@@ -143,6 +143,10 @@ main {
   width: 80%;
 }
 
+.project {
+  margin-bottom: 15px !important;
+}
+
 .size1 {
   height: 100%;
 }
@@ -164,7 +168,7 @@ main {
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn .5s ease-in 1 forwards;
+  animation: fadeIn .4s ease-in 1 forwards;
 }
 
 .project-box {
