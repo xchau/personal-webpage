@@ -8,6 +8,11 @@
   src: url("../assets/fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "raleway";
+  src: url("../assets/fonts/Raleway-Light.ttf");
+}
+
 html, body, main {
   display: flex;
   justify-content: center;
@@ -36,11 +41,12 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 5px 0px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   width: 80%;
 }
 
 #name-box {
+  cursor: default;
 }
 
 #name-box .name {
@@ -90,7 +96,7 @@ main {
 }
 
 .active {
-  border-bottom: 2px solid lightcoral;
+  border-bottom: 2px solid #e34562;
 }
 
 .hero-text {
@@ -99,13 +105,13 @@ main {
 }
 
 .contact-logo {
-  height: 2rem;
-  width: 2rem;
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 .email {
-  height: 2.1rem;
-  width: 2.1rem;
+  height: 1.9rem;
+  width: 1.9rem;
 }
 
 .email:hover {
@@ -125,22 +131,22 @@ main {
 }
 
 #porfolio-grid {
-	-moz-column-count: 3;
+	-moz-column-count: 4;
 	-moz-column-gap: 8px;
-	-webkit-column-count: 3;
+	-webkit-column-count: 4;
 	-webkit-column-gap: 8px;
-	column-count: 3;
+	column-count: 4;
 	column-gap: 8px;
   list-style: none;
+  margin-bottom: 35px;
   padding: 0;
 	width: 100%;
 }
 
 #porfolio-grid img {
 	display: inline-block;
-  margin: 0 10%;
-	/*margin-bottom: 10px;*/
-  width: 80%;
+  margin: 0 15%;
+  width: 70%;
 }
 
 .project {
@@ -148,15 +154,16 @@ main {
 }
 
 .size1 {
-  height: 100%;
+  /*height: 240px;*/
+  width: 80%;
 }
 
 .size2 {
-  height: 150%;
+  /*height: 420px;*/
 }
 
 .size3 {
-  height: 200%;
+  height: 100%;
 }
 
 /* OVERLAY STYLES */
@@ -181,16 +188,26 @@ main {
   height: 100%;
   justify-content: space-between;
   position: absolute;
-  margin: 0 10%;
+  margin: 0 15%;
   top: 0;
-  width: 80%;
+  width: 70%;
 }
 
 .overlay-top, .overlay-bottom {
   background-color: rgba(30, 30, 30, 0.75);
   border-radius: 6px;
-  height: 50px;
+  height: 40px;
   width: 100%;
+}
+
+.overlay-top {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-family: raleway;
+  font-size: 1.2rem;
+  font-weight: 400;
+  justify-content: center;
 }
 
 .hidden {

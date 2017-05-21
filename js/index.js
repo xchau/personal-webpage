@@ -12,6 +12,9 @@
         // const height = target.offsetHeight;
         // const width = target.offsetWidth;
         const overlay = target.nextElementSibling;
+        const top = overlay.children[0].children[0];
+
+        top.innerText = label;
 
         overlay.classList.remove('hidden');
         overlay.classList.add('fade-in');
