@@ -1,8 +1,14 @@
 'use strict';
 
 (() => {
-  const test = $('<div>').addClass('cool');
-  console.log(test);
+  $.ajax({
+    contentType: 'application/json',
+    dataType: 'json',
+    type: 'get',
+    url: 'https://jsonplaceholder.typicode.com/posts/1'
+  })
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err))
 
   const showOverlayOnHover = () => {
     const grid = document.querySelector('#porfolio-grid');

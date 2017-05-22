@@ -1,13 +1,29 @@
+'use strict';
 
-exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
+exports.seed = function(knex) {
+  return knex('projects').del()
     .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
+      return knex('projects').insert([{
+        id: 1,
+        title: 'Blip',
+        img: 'blip-tn.jpg',
+        description: 'Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Developed with React Native, Xcode, Redux, Node.js (Express) and PostgresQL. iOS only.',
+        created_at: '2017-04-01 19:42:16.964-07',
+        updated_at: new Date,
+      }, {
+        id: 2,
+        title: 'this.city',
+        img: 'blip-tn.jpg',
+        description: 'Developed with React Native, Android SDK, Node.js (Express) and PostgresQL, this.city is a Waze-like Android application that allows users to pin gripes or concerns about their city.',
+        created_at: '2017-02-15 19:42:16.964-07',
+        updated_at: new Date
+      }, {
+        id: 3,
+        title: 'LENDit',
+        img: 'lendit-tn.png',
+        description: 'A community-based sharing web app built front to back-end using HTML, Materialize CSS, JavaScript, Node.js (Express) and PostgresQL. LENDit allows users in the Seattle area to conveniently share items from a collective pool of shared belongings.',
+        created_at: '2017-01-01 19:42:16.964-07',
+        updated_at: new Date
+      }]);
     });
 };
