@@ -156,7 +156,7 @@ main {
 }
 
 .project {
-  margin-bottom: 15px !important;
+  /*margin-bottom: 15px !important;*/
 }
 
 .size1 {
@@ -186,6 +186,7 @@ main {
 }
 
 .project-box {
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -246,6 +247,19 @@ main {
 }
 
 /* MOBILE SCREENS */
+@media (max-device-width: 600px) {
+  .overlay-box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hidden {
+    display: flex;
+  }
+}
+
 @media (max-device-width: 600px), (max-width: 808px) {
   #name-box {
     display: flex;
