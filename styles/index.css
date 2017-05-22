@@ -222,7 +222,7 @@ main {
   font-weight: 400;
 }
 
-.info, .demo {
+.project-link {
   display: flex;
   justify-content: center;
   width: 50%;

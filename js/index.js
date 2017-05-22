@@ -1,6 +1,9 @@
 'use strict';
 
 (() => {
+  const test = $('<div>').addClass('cool');
+  console.log(test);
+
   const showOverlayOnHover = () => {
     const grid = document.querySelector('#porfolio-grid');
 
@@ -9,20 +12,16 @@
 
       if (target.nodeName === 'IMG') {
         const label = target.dataset.name;
-        // const height = target.offsetHeight;
-        // const width = target.offsetWidth;
         const overlay = target.nextElementSibling;
         const top = overlay.children[0].children[0];
+        const bottom = overlay.children[1].children[0];
+        // const
 
         top.innerText = label;
 
         overlay.classList.remove('hidden');
         overlay.classList.add('fade-in');
-        // overlay.style.width = `${width}px`;
-        // overlay.style.top = `${height / 1.6}px`;
 
-        // console.log(target.children);
-        // console.log(overlay);
 
         overlay.addEventListener('mouseout', (e) => {
           overlay.classList.add('hidden');
