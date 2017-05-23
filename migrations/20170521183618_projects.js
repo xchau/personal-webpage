@@ -9,9 +9,13 @@ exports.up = function(knex) {
       .notNullable()
       .defaultTo('');
     table
-      .string('img')
+      .string('img_name')
       .notNullable()
       .defaultTo('');
+    table
+      .string('img_size')
+      .notNullable()
+      .defaultTo('size1');
     table
       .text('description')
       .notNullable()

@@ -21,6 +21,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "humps": "^2.0.0",
     "knex": "^0.13.0",
     "pg": "^6.2.2"
   },

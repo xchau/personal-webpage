@@ -221,13 +221,15 @@ main {
 .overlay-bottom {
   align-items: center;
   display: flex;
+  width: 100%;
 }
 
 .overlay-bottom a {
   color: #fff;
   font-family: raleway, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
+  width: 50%;
 }
 
 .project-link {
@@ -239,7 +241,6 @@ main {
 .divider {
   color: #fff;
   font-size: 1.3rem;
-  /*font-family: raleway, sans-serif;*/
 }
 
 .hidden {
@@ -326,6 +327,10 @@ main {
   .option {
     font-size: 0.9rem;
   }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
 }
 
 /* SMALL SCREENS */
@@ -339,6 +344,10 @@ main {
     text-align: center;
   }
 
+  #contact-section {
+    width: 60%;
+  }
+
   .option {
     font-size: 0.9rem;
   }
@@ -346,6 +355,14 @@ main {
   .contact-logo {
     height: 1.1rem;
     width: 1.1rem;
+  }
+
+  .project-title {
+    font-size: 0.9rem;
+  }
+
+  .project-link {
+    font-size: 0.6rem !important;
   }
 }
 
