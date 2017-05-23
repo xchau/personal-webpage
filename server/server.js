@@ -11,7 +11,7 @@ app.use(morgan('short'));
 
 const projects = require('./routes/projects');
 
-app.use(projects);
+app.use('/api', projects);
 
 app.use((req, res) => {
   res.sendStatus(404);
@@ -20,4 +20,10 @@ app.use((req, res) => {
 app.use((err, req, res, _next) => {
   console.error(err.stack);
   res.status(err.status || 500);
+});
+
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}...`);
 });

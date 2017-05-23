@@ -5,7 +5,7 @@
     contentType: 'application/json',
     dataType: 'json',
     type: 'get',
-    url: 'https://jsonplaceholder.typicode.com/posts/1'
+    url: 'http://localhost:8000/api/projects'
   })
   .then((res) => console.log(res))
   .catch((err) => console.log(err))

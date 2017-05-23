@@ -1,8 +1,17 @@
 'use strict';
 
-const knex = require('knex');
+const knex = require('../../knex');
 const router = require('express').Router();
 
-router.get('/', (req, res, next) => {
-  res.send('hi from api');
+router.get('/projects', (req, res, next) => {
+  knex('projects')
+    .orderBy('id')
+    .then((projects) => {
+      res.send(projects);
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
+
+module.exports = router;

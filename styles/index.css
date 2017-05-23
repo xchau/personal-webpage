@@ -331,7 +331,7 @@ main {
 /* SMALL SCREENS */
 @media (max-width: 360px) {
   #name-box .name {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 
   #name-box .small {
@@ -341,5 +341,34 @@ main {
 
   .option {
     font-size: 0.9rem;
+  }
+
+  .contact-logo {
+    height: 1.1rem;
+    width: 1.1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #name-box .name {
+    font-size: 1rem;
+  }
+
+  #name-box {
+    height: 40px;
+    margin: 0;
+  }
+
+  #link-box {
+    margin-top: 10px;
+  }
+
+  #name-box .small {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .option {
+    font-size: 0.5rem;
   }
 }
