@@ -43,6 +43,7 @@
     img.className = `project ${attrs.imgSize}`;
     img.setAttribute('data-id', attrs.id);
     img.setAttribute('src', `./assets/img/${attrs.imgName}`);
+
     prBox.appendChild(img);
     li.appendChild(prBox);
 
@@ -50,37 +51,22 @@
 
     prBox.appendChild(overlay);
 
-    console.log(prBox);
+    return prBox;
   };
 
-
-  $.ajax({
-    contentType: 'application/json',
-    dataType: 'json',
-    type: 'get',
-    url: 'http://localhost:8000/api/projects'
-  })
-  .then((projects) => {
-    for (const project of projects) {
-      createListItem(project);
-    }
-  })
-  .catch((err) => console.log(err))
-
   const showOverlayOnHover = () => {
-    const grid = document.querySelector('#porfolio-grid');
+    const grid = document.querySelector('#portfolio-grid');
 
     grid.addEventListener('mouseover', (event) => {
       const target = event.target;
 
       if (target.nodeName === 'IMG') {
-        const label = target.dataset.name;
+        // const label = target.dataset.name;
         const overlay = target.nextElementSibling;
         const top = overlay.children[0].children[0];
         const bottom = overlay.children[1].children[0];
-        // const
 
-        top.innerText = label;
+        // top.innerText = label;
 
         overlay.classList.remove('hidden');
         overlay.classList.add('fade-in');
@@ -92,6 +78,28 @@
       }
     });
   };
+
+
+  $.ajax({
+    contentType: 'application/json',
+    dataType: 'json',
+    type: 'get',
+    url: 'http://localhost:8000/api/projects'
+  })
+  .then((projects) => {
+    const grid = document.querySelector('#portfolio-grid');
+
+    for (const project of projects) {
+      const listItem = createListItem(project);
+
+      grid.appendChild(listItem);
+    }
+
+    showOverlayOnHover();
+  })
+  .catch((err) => console.log(err))
+
+
 
   // const hideOverlay = () => {
   //   const grid = document.querySelector('#porfolio-grid');
@@ -109,7 +117,7 @@
   //   });
   // }
 
-  showOverlayOnHover();
+  // showOverlayOnHover();
 
 
 })();
