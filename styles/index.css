@@ -151,26 +151,25 @@ main {
 
 #portfolio-grid img {
 	display: inline-block;
-  margin: 0 15%;
-  width: 70%;
 }
 
 .project {
-  /*margin-bottom: 15px !important;*/
+
 }
 
 .size1 {
-  /*margin: 0 10%;
-  width: 80%;*/
+  margin: 0 2% !important;
+  width: 96% !important;
 }
 
 .size2 {
-  /*height: 420px;*/
+  margin: 0 10% !important;
+  width: 80% !important;
 }
 
 .size3 {
-  margin: 0 10% !important;
-  width: 80% !important;
+  margin: 0 5% !important;
+  width: 90% !important;
 }
 
 /* OVERLAY STYLES */
@@ -204,7 +203,7 @@ main {
 .overlay-top, .overlay-bottom {
   background-color: rgba(30, 30, 30, 0.75);
   border-radius: 6px;
-  height: 40px;
+  height: 28px;
   width: 100%;
 }
 

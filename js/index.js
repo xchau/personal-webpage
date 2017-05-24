@@ -66,11 +66,8 @@
         const top = overlay.children[0].children[0];
         const bottom = overlay.children[1].children[0];
 
-        // top.innerText = label;
-
         overlay.classList.remove('hidden');
         overlay.classList.add('fade-in');
-
 
         overlay.addEventListener('mouseout', (e) => {
           overlay.classList.add('hidden');
@@ -97,27 +94,7 @@
 
     showOverlayOnHover();
   })
-  .catch((err) => console.log(err))
-
-
-
-  // const hideOverlay = () => {
-  //   const grid = document.querySelector('#porfolio-grid');
-  //
-  //   grid.addEventListener('mouseout', (event) => {
-  //     const target = event.target;
-  //
-  //     if (target.nodeName === 'IMG') {
-  //       const overlay = target.nextElementSibling;
-  //       console.log(overlay);
-  //
-  //       overlay.classList.add('hidden');
-  //
-  //     }
-  //   });
-  // }
-
-  // showOverlayOnHover();
-
-
+  .catch((err) => {
+    console.log(err);
+  });
 })();
