@@ -13,21 +13,21 @@
     const title = document.createElement('p');
     const infoLink = document.createElement('a');
     const divider = document.createElement('span');
-    const demoLink = document.createElement('a');
+    const repoLink = document.createElement('a');
 
     title.classList.add('project-title');
     title.innerText = attrs.title;
     infoLink.classList.add('project-link');
     infoLink.innerText = 'Info';
-    demoLink.classList.add('project-link');
-    demoLink.innerText = 'Demo';
+    repoLink.classList.add('project-link');
+    repoLink.innerText = 'Repo';
     divider.classList.add('divider');
     divider.innerHTML = '&#8901;';
 
     ovTop.appendChild(title);
     ovBottom.appendChild(infoLink);
     ovBottom.appendChild(divider);
-    ovBottom.appendChild(demoLink);
+    ovBottom.appendChild(repoLink);
     ovBox.appendChild(ovTop);
     ovBox.appendChild(ovBottom);
 
@@ -88,6 +88,8 @@
 
     for (const project of projects) {
       const listItem = createListItem(project);
+
+      console.log(listItem);
 
       grid.appendChild(listItem);
     }

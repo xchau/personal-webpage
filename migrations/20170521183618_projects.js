@@ -17,6 +17,10 @@ exports.up = function(knex) {
       .notNullable()
       .defaultTo('size1');
     table
+      .string('github')
+      .notNullable()
+      .defaultTo('https://github.com/xchau');
+    table
       .text('description')
       .notNullable()
       .defaultTo('');

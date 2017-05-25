@@ -72,7 +72,6 @@ main {
 #contact-section {
   align-items: center;
   display: flex;
-  height: 100px;
   justify-content: space-around;
   margin-top: 16px;
   width: 40%;
@@ -129,9 +128,6 @@ main {
 
 /* GRID STYLES */
 #portfolio-section {
-  /*display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;*/
   margin: 0 auto;
 	width: 100%;
 }
@@ -223,7 +219,7 @@ main {
   width: 100%;
 }
 
-.overlay-bottom a {
+.project-link {
   color: #fff;
   font-family: raleway, sans-serif;
   font-size: 0.9rem;
@@ -246,6 +242,22 @@ main {
   display: none;
 }
 
+/* SEMI LARGE */
+@media (max-width: 1000px) {
+  #portfolio-grid {
+  	-moz-column-count: 3;
+  	-moz-column-gap: 8px;
+  	-webkit-column-count: 3;
+  	-webkit-column-gap: 8px;
+  	column-count: 3;
+  	column-gap: 8px;
+    list-style: none;
+    margin-bottom: 35px;
+    padding: 0;
+  	width: 100%;
+  }
+}
+
 /* MOBILE SCREENS */
 @media (max-device-width: 600px) {
   .overlay-box {
@@ -257,6 +269,35 @@ main {
 
   .hidden {
     display: flex;
+  }
+
+  .overlay-top, .overlay-bottom {
+    height: 35px;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-link {
+    font-size: 1.7rem;
+  }
+
+  .project-box {
+    margin-bottom: 22px;
+  }
+
+  #portfolio-section {
+    margin-bottom: 30px;
+  }
+
+  #contact-section {
+    width: 60%;
+  }
+
+  .contact-logo{
+    height: 3rem;
+    width: 3rem;
   }
 }
 
@@ -344,7 +385,7 @@ main {
   }
 
   #contact-section {
-    width: 60%;
+    width: 80%;
   }
 
   .option {
