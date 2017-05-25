@@ -19,6 +19,7 @@
     title.innerText = attrs.title;
     infoLink.classList.add('project-link');
     infoLink.innerText = 'Info';
+    // info.setAttribute('href', ``)
     repoLink.classList.add('project-link');
     repoLink.innerText = 'Repo';
     repoLink.setAttribute('href', attrs.github);
@@ -43,7 +44,6 @@
 
     prBox.classList.add('project-box');
     img.className = `project ${attrs.imgSize}`;
-    img.setAttribute('data-id', attrs.id);
     img.setAttribute('src', `./assets/img/${attrs.imgName}`);
 
     prBox.appendChild(img);
@@ -63,7 +63,6 @@
       const target = event.target;
 
       if (target.nodeName === 'IMG') {
-        // const label = target.dataset.name;
         const overlay = target.nextElementSibling;
         const top = overlay.children[0].children[0];
         const bottom = overlay.children[1].children[0];
