@@ -222,6 +222,7 @@ main {
 .project-link {
   color: #fff;
   font-family: raleway, sans-serif;
+  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 400;
   width: 50%;

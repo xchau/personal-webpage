@@ -21,6 +21,8 @@
     infoLink.innerText = 'Info';
     repoLink.classList.add('project-link');
     repoLink.innerText = 'Repo';
+    repoLink.setAttribute('href', attrs.github);
+    repoLink.setAttribute('target', '_blank');
     divider.classList.add('divider');
     divider.innerHTML = '&#8901;';
 
