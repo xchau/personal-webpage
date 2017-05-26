@@ -2,10 +2,11 @@
 
 const express = require('express');
 const app = express();
+const path = require('path');
 
 app.disable('x-powered-by');
 
-const projects = require('./routes/projects');
+app.use(express.static(path.join('public')));
 
 if (process.env.NODE_ENV !== 'production') {
   const morgan = require('morgan');
@@ -18,6 +19,8 @@ if (process.env.NODE_ENV !== 'production') {
     next();
   });
 }
+
+const projects = require('./routes/projects');
 
 app.use('/api', projects);
 

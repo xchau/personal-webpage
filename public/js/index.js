@@ -17,7 +17,8 @@
 
     title.classList.add('project-title');
     title.innerText = attrs.title;
-    infoLink.className = `project-link ${attrs.id}`;
+    infoLink.classList.add('project-link');
+    infoLink.setAttribute('data-id', attrs.id);
     infoLink.innerText = 'Info';
     repoLink.classList.add('project-link');
     repoLink.innerText = 'Repo';
@@ -81,7 +82,7 @@
     contentType: 'application/json',
     dataType: 'json',
     type: 'get',
-    url: 'https://xchau-pws.herokuapp.com/api/projects'
+    url: 'http://localhost:8000/api/projects'
   })
   .then((projects) => {
     const grid = document.querySelector('#portfolio-grid');
