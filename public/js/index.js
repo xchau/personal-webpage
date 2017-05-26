@@ -82,7 +82,7 @@
     contentType: 'application/json',
     dataType: 'json',
     type: 'get',
-    url: 'http://localhost:8000/api/projects'
+    url: 'https://xchau-pws.herokuapp.com/api/projects'
   })
   .then((projects) => {
     const grid = document.querySelector('#portfolio-grid');
