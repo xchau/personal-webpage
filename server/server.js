@@ -6,7 +6,7 @@ const path = require('path');
 
 app.disable('x-powered-by');
 
-app.use(express.static(path.join('public')));
+app.use(express.static(path.join('../public')));
 
 if (process.env.NODE_ENV !== 'production') {
   const morgan = require('morgan');
