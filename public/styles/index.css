@@ -219,6 +219,10 @@ main {
   width: 100%;
 }
 
+.divider {
+  cursor: default;
+}
+
 .project-link {
   color: #fff;
   font-family: raleway, sans-serif;
