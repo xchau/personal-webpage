@@ -6,9 +6,9 @@
     const ovTop = document.createElement('div');
     const ovBottom = document.createElement('div');
 
-    ovBox.className = `hidden overlay-box ${attrs.imgSize}`;
-    ovTop.classList.add('overlay-top');
-    ovBottom.classList.add('overlay-bottom');
+    ovBox.className = `hidden overlay-box ${attrs.imgSize} ov`;
+    ovTop.className = 'overlay-top ov';
+    ovBottom.className = 'overlay-bottom ov';
 
     const title = document.createElement('p');
     const infoLink = document.createElement('a');
@@ -58,31 +58,27 @@
 
   const showOverlayOnHover = () => {
     const grid = document.querySelector('#portfolio-grid');
-
-    let overlay, top, bottom;
+    const body = document.getElementsByTagName('body')[0];
 
     grid.addEventListener('mouseover', (event) => {
       const target = event.target;
-      const classes = target.className.split(' ');
 
       if (target.nodeName === 'IMG') {
-        overlay = target.nextElementSibling;
-        // console.log(overlay);
-        top = overlay.children[0];
-        bottom = overlay.children[1];
+        const overlay = target.nextElementSibling;
 
         overlay.classList.remove('hidden');
         overlay.classList.add('fade-in');
 
+        overlay.addEventListener('mouseover', () => {
+          overlay.classList.remove('hidden');
+        });
 
+        overlay.addEventListener('mouseout', (event) => {
+          overlay.classList.add('hidden');
+        });
       }
-
-      top.addEventListener('mouseout', (e) => {
-        overlay.classList.add('hidden');
-      });
     });
   };
-
 
   $.ajax({
     contentType: 'application/json',
