@@ -7,7 +7,6 @@ const path = require('path');
 app.disable('x-powered-by');
 
 const index = path.join(__dirname, '..', 'public');
-console.log(index);
 
 app.use(express.static(index));
 

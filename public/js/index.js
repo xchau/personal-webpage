@@ -59,21 +59,27 @@
   const showOverlayOnHover = () => {
     const grid = document.querySelector('#portfolio-grid');
 
+    let overlay, top, bottom;
+
     grid.addEventListener('mouseover', (event) => {
       const target = event.target;
+      const classes = target.className.split(' ');
 
       if (target.nodeName === 'IMG') {
-        const overlay = target.nextElementSibling;
-        const top = overlay.children[0].children[0];
-        const bottom = overlay.children[1].children[0];
+        overlay = target.nextElementSibling;
+        // console.log(overlay);
+        top = overlay.children[0];
+        bottom = overlay.children[1];
 
         overlay.classList.remove('hidden');
         overlay.classList.add('fade-in');
 
-        overlay.addEventListener('mouseout', (e) => {
-          overlay.classList.add('hidden');
-        });
+
       }
+
+      top.addEventListener('mouseout', (e) => {
+        overlay.classList.add('hidden');
+      });
     });
   };
 
@@ -82,7 +88,8 @@
     contentType: 'application/json',
     dataType: 'json',
     type: 'get',
-    url: 'https://xchau-pws.herokuapp.com/api/projects'
+    // url: 'https://xchau-pws.herokuapp.com/api/projects'
+    url: 'http://localhost:8000/api/projects'
   })
   .then((projects) => {
     const grid = document.querySelector('#portfolio-grid');
