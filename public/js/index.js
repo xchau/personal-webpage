@@ -3,19 +3,43 @@
 (() => {
   const accessModal = (attrs) => {
     const modal = document.getElementById('info-modal');
-    const infoLinks = document.querySelectorAll('.info-link');
+    const grid = document.querySelector('#portfolio-grid');
     const span = document.getElementsByClassName('close')[0];
 
     span.addEventListener('click', () => {
       modal.style.display = 'none';
     });
 
-    for (const link of infoLinks) {
-      link.addEventListener('click', () => {
-        modal.classList.add('fade-in');
-        modal.style.display = 'block';
-      });
-    }
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    grid.addEventListener('click', (event) => {
+      const target = event.target;
+      const classes = target.className.split(' ');
+
+      if (classes.includes('info-link')) {
+        const id = target.getAttribute('data-id');
+
+        $.ajax({
+          contentType: 'application/json',
+          dataType: 'json',
+          type: 'get',
+          // url: `https://xchau-pws.herokuapp.com/api/projects/${id}`
+          url: `http://localhost:8000/api/projects/${id}`
+        })
+        .then((project) => {
+          console.log(project);
+          modal.classList.add('fade-in');
+          modal.style.display = 'block';
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+      }
+    });
   };
 
   const createOverlay = (attrs) => {
@@ -75,7 +99,6 @@
 
   const showOverlayOnHover = () => {
     const grid = document.querySelector('#portfolio-grid');
-    const body = document.getElementsByTagName('body')[0];
 
     grid.addEventListener('mouseover', (event) => {
       const target = event.target;

@@ -32,3 +32,30 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+/*@-webkit-keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade-out {
+  -webkit-animation: 0.5s;
+  -moz-animation: 0.5s;
+  -o-animation: 0.5s;
+  animation: fadeOut 0.5s;
+}*/
