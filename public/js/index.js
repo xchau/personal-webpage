@@ -1,14 +1,31 @@
 'use strict';
 
 (() => {
+  const accessModal = (attrs) => {
+    const modal = document.getElementById('info-modal');
+    const infoLinks = document.querySelectorAll('.info-link');
+    const span = document.getElementsByClassName('close')[0];
+
+    span.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    for (const link of infoLinks) {
+      link.addEventListener('click', () => {
+        modal.classList.add('fade-in');
+        modal.style.display = 'block';
+      });
+    }
+  };
+
   const createOverlay = (attrs) => {
     const ovBox = document.createElement('div');
     const ovTop = document.createElement('div');
     const ovBottom = document.createElement('div');
 
-    ovBox.className = `hidden overlay-box ${attrs.imgSize} ov`;
-    ovTop.className = 'overlay-top ov';
-    ovBottom.className = 'overlay-bottom ov';
+    ovBox.className = `hidden overlay-box ${attrs.imgSize}`;
+    ovTop.classList.add('overlay-top');
+    ovBottom.classList.add('overlay-bottom');
 
     const title = document.createElement('p');
     const infoLink = document.createElement('a');
@@ -17,7 +34,7 @@
 
     title.classList.add('project-title');
     title.innerText = attrs.title;
-    infoLink.classList.add('project-link');
+    infoLink.className = 'project-link info-link';
     infoLink.setAttribute('data-id', attrs.id);
     infoLink.innerText = 'Info';
     repoLink.classList.add('project-link');
@@ -93,12 +110,11 @@
     for (const project of projects) {
       const listItem = createListItem(project);
 
-      console.log(listItem);
-
       grid.appendChild(listItem);
     }
 
     showOverlayOnHover();
+    accessModal();
   })
   .catch((err) => {
     console.log(err);

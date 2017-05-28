@@ -225,22 +225,24 @@ main {
 
 .project-link {
   color: #fff;
+  display: flex;
+  justify-content: center;
   font-family: raleway, sans-serif;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 400;
-  width: 50%;
+  width: 45%;
 }
 
-.project-link {
-  display: flex;
-  justify-content: center;
-  width: 50%;
+.info-link {
+  cursor: pointer;
 }
 
 .divider {
   color: #fff;
   font-size: 1.3rem;
+  text-align: center;
+  width: 10%;
 }
 
 .hidden {
