@@ -1,18 +1,41 @@
 'use strict';
 
 (() => {
-  const accessModal = (attrs) => {
+  const fillModal = (attrs) => {
+    const title = document.querySelector('.modal-title');
+    const desc = document.querySelector('.modal-desc');
+
+    title.innerText = attrs.title;
+    desc.innerText = attrs.description;
+
+    const stackBox = document.querySelector('.stack-box');
+    const stack = attrs.stack.split(',');
+
+    for (const tech of stack) {
+      const span = document.createElement('span');
+
+      span.classList.add('modal-tech');
+      span.innerText = tech;
+
+      stackBox.appendChild(span);
+    }
+  }
+
+  const activateModal = () => {
     const modal = document.getElementById('info-modal');
     const grid = document.querySelector('#portfolio-grid');
     const span = document.getElementsByClassName('close')[0];
+    const stackBox = document.querySelector('.stack-box');
 
     span.addEventListener('click', () => {
       modal.style.display = 'none';
+      stackBox.innerHTML = '';
     });
 
     window.addEventListener('click', (event) => {
       if (event.target === modal) {
         modal.style.display = 'none';
+        stackBox.innerHTML = '';
       }
     });
 
@@ -32,6 +55,8 @@
         })
         .then((project) => {
           console.log(project);
+          fillModal(project);
+
           modal.classList.add('fade-in');
           modal.style.display = 'block';
         })
@@ -137,7 +162,7 @@
     }
 
     showOverlayOnHover();
-    accessModal();
+    activateModal();
   })
   .catch((err) => {
     console.log(err);

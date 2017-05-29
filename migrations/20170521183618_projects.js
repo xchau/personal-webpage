@@ -25,6 +25,10 @@ exports.up = function(knex) {
       .notNullable()
       .defaultTo('');
     table
+      .string('stack')
+      .notNullable()
+      .defaultTo('JavaScript');
+    table
       .timestamps(true, true);
   })
 };
