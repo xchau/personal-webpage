@@ -50,8 +50,8 @@
           contentType: 'application/json',
           dataType: 'json',
           type: 'get',
-          // url: `https://xchau-pws.herokuapp.com/api/projects/${id}`
-          url: `http://localhost:8000/api/projects/${id}`
+          url: `https://xchau-pws.herokuapp.com/api/projects/${id}`
+          // url: `http://localhost:8000/api/projects/${id}`
         })
         .then((project) => {
           console.log(project);
@@ -149,8 +149,8 @@
     contentType: 'application/json',
     dataType: 'json',
     type: 'get',
-    // url: 'https://xchau-pws.herokuapp.com/api/projects'
-    url: 'http://localhost:8000/api/projects'
+    url: 'https://xchau-pws.herokuapp.com/api/projects'
+    // url: 'http://localhost:8000/api/projects'
   })
   .then((projects) => {
     const grid = document.querySelector('#portfolio-grid');
