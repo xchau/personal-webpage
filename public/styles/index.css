@@ -98,7 +98,7 @@ main {
 }
 
 .active {
-  border-bottom: 2px solid #e34562;
+  border-bottom: 2px solid lightcoral;
 }
 
 .hero-text {
