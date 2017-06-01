@@ -3,27 +3,64 @@ body {
   justify-content: flex-start;
 }
 
-#summary-container, #skills-container, #edu-container {
-  align-items: center;
+#nav-container {
+  margin-bottom: 20px;
+}
+
+#skills-container, #edu-container {
+  align-items: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 18px;
+  width: 100%;
 }
 
 #summary-container {
-  background: url('../assets/img/cover-photo.jpg');
+  align-items: center;
+  background: url('../assets/img/desktop.jpg');
   background-size: cover;
-  height: 50%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 55%;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 #summary-container p {
   color: #fff;
   font-family: opensans-light, Helvetica Neue, sans-serif;
   font-size: 1.1rem;
-  margin: 0;
+  line-height: 1.8;
+  margin: 15px 0px;
   text-align: center;
   width: 70%;
+}
+
+#skills-container, #edu-container {
+  min-height: 22%;
+  margin-bottom: 30px;
+}
+
+#skills-container div {
+  align-items: flex-start;
+  display: flex;
+  font-family: opensans-light, Helvetica Neue, sans-serif;
+  font-size: 1.1rem;
+  justify-content: space-between;
+  width: 75%;
+}
+
+#skills-container div ul {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  list-style: none;
+  margin: 0;
+  padding-left: 15px;
 }
 
 #skills-container p, #edu-container p {
@@ -31,13 +68,28 @@ body {
   font-size: 0.9rem;
   line-height: 2.1;
   margin: 0;
-  text-align: center;
+  margin-left: 15px;
+  text-align: left;
+}
+
+#pic-box {
+  background: url('../assets/img/profile-pic.jpg');
+  background-size: cover;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 140px;
+  left: -70px;
+  margin-top: 15px;
+  position: absolute;
+  width: 140px;
 }
 
 .section-header {
   /*border-bottom: 1px solid #444;*/
   font-family: opensans;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 4px 0px;
   text-align: center;
 }
+
+/*.info-row*/
