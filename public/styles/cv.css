@@ -60,59 +60,75 @@ body {
 }
 
 #skills-container, #edu-container {
-  align-items: flex-start;
+  align-items: center;
   /*border: 1px solid black;*/
   display: flex;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px 0;
   width: 100%;
 }
 
-#skills-container div:nth-child(2) {
-  /*background-color: blue;*/
+#skills-container div {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 7%;
+  margin-right: 3%;
+  width: 90%;
 }
 
 #skills-container ul {
-  font-family: opensans-light, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-family: opensans-light, Helvetica Neue, Raleway, sans-serif;
+  font-size: 0.9rem;
+  line-height: 2;
   list-style: none;
   margin: 0;
   margin-left: 20px;
   padding: 0;
-  width: 28%;
+  width: 80%;
 }
 
-#skills-container h4 {
-  /*text-align: left;*/
-}
+/*#skills-container div:first-child {
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  height: 1.8rem;
+  justify-content: center;
+  width: 1.8rem;
+}*/
 
-.icon {
+.resume-icon {
   height: 1.2rem;
-  width: 1.2rem;
   margin-right: 10px;
+  width: 1.2rem;
+}
+
+.section-icon {
+  height: 2.3rem;
+  left: 0;
+  position: absolute;
+  width: 2.3rem;
 }
 
 .skills {
   justify-content: space-around;
 }
 
-.left-box {
-  width: 15%;
-}
-
-.right-box {
-  width: 85%;
-}
-
 .section-header {
   /*border-bottom: 1px solid #444;*/
-  font-family: opensans;
-  font-size: 0.9rem;
-  margin: 3px 0;
+  font-family: Raleway, sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.horiz-line {
+  border-top: 1px solid #505050;
+  margin: 35px 0;
+  width: 60%;
 }
 
 /*.info-row*/
