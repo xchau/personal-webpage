@@ -7,15 +7,6 @@ body {
   margin-bottom: 20px;
 }
 
-#skills-container, #edu-container {
-  align-items: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  margin-bottom: 18px;
-  width: 100%;
-}
-
 #summary-container {
   align-items: center;
   background: url('../assets/img/desktop.jpg');
@@ -41,37 +32,6 @@ body {
   width: 70%;
 }
 
-#skills-container, #edu-container {
-  min-height: 22%;
-  margin-bottom: 30px;
-}
-
-#skills-container div {
-  align-items: flex-start;
-  display: flex;
-  font-family: opensans-light, Helvetica Neue, sans-serif;
-  font-size: 1.1rem;
-  justify-content: space-between;
-  width: 75%;
-}
-
-#skills-container div ul {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  list-style: none;
-  margin: 0;
-  padding-left: 15px;
-}
-
-#skills-container p, #edu-container p {
-  font-family: opensans-light, Helvetica Neue, sans-serif;
-  font-size: 0.9rem;
-  line-height: 2.1;
-  margin: 0;
-  margin-left: 15px;
-  text-align: left;
-}
-
 #pic-box {
   background: url('../assets/img/profile-pic.jpg');
   background-size: cover;
@@ -84,11 +44,74 @@ body {
   width: 140px;
 }
 
+#cv-download {
+  align-items: center;
+  border: 2px solid #f2f4ad;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  font-family: raleway, opensans-light, sans-serif;
+  font-size: 0.9rem;
+  justify-content: center;
+  height: 40px;
+  margin-top: 20px;
+  text-decoration: none;
+  width: 16%;
+}
+
+#skills-container, #edu-container {
+  align-items: flex-start;
+  /*border: 1px solid black;*/
+  display: flex;
+  justify-content: left;
+  margin: 10px 0;
+  width: 100%;
+}
+
+#skills-container div:nth-child(2) {
+  /*background-color: blue;*/
+  display: flex;
+  justify-content: flex-start;
+}
+
+#skills-container ul {
+  font-family: opensans-light, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  list-style: none;
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  width: 28%;
+}
+
+#skills-container h4 {
+  /*text-align: left;*/
+}
+
+.icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 10px;
+}
+
+.skills {
+  justify-content: space-around;
+}
+
+.left-box {
+  width: 15%;
+}
+
+.right-box {
+  width: 85%;
+}
+
 .section-header {
   /*border-bottom: 1px solid #444;*/
   font-family: opensans;
-  font-size: 1rem;
-  margin: 4px 0px;
+  font-size: 0.9rem;
+  margin: 3px 0;
   text-align: center;
 }
 
