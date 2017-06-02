@@ -1,6 +1,7 @@
 body {
   display: flex;
   justify-content: flex-start;
+  /*min-height: 1000px;*/
 }
 
 #nav-container {
@@ -17,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 55%;
+  min-height: 360px;
   margin-bottom: 15px;
   position: relative;
 }
@@ -59,23 +60,38 @@ body {
   width: 16%;
 }
 
+#info-container {
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
 #skills-container, #edu-container {
   align-items: center;
-  /*border: 1px solid black;*/
+  background-color: #fff;
+  border: 2px solid #e66b6b;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px 0;
+  min-height: 22%;
+  /*margin-top: 22px;
+  margin-bottom: 28px;*/
   width: 100%;
+  z-index: 100;
+}
+
+#skills-container {
+  min-height: 220px;
 }
 
 #skills-container div {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 7%;
-  margin-right: 3%;
-  width: 90%;
+  margin-left: 6%;
+  margin-right: 6%;
+  width: 88%;
 }
 
 #skills-container ul {
@@ -86,30 +102,18 @@ body {
   margin: 0;
   margin-left: 20px;
   padding: 0;
-  width: 80%;
+  width: 25%;
 }
 
-/*#skills-container div:first-child {
-  align-items: center;
-  border-radius: 50%;
-  border: 1px solid #2a2a2a;
-  display: flex;
-  height: 1.8rem;
-  justify-content: center;
-  width: 1.8rem;
-}*/
+#edu-container {
+  font-family: opensans-light, Helvetica Neue, Raleway, sans-serif;
+  font-size: 0.9rem;
+}
 
 .resume-icon {
   height: 1.2rem;
   margin-right: 10px;
   width: 1.2rem;
-}
-
-.section-icon {
-  height: 2.3rem;
-  left: 0;
-  position: absolute;
-  width: 2.3rem;
 }
 
 .skills {
@@ -120,15 +124,31 @@ body {
   /*border-bottom: 1px solid #444;*/
   font-family: Raleway, sans-serif;
   font-size: 1rem;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   margin-bottom: 20px;
   text-align: center;
 }
 
-.horiz-line {
-  border-top: 1px solid #505050;
-  margin: 35px 0;
-  width: 60%;
+.spacer {
+  background-color: transparent;
+  /*height: 1px;*/
+  margin: 30px 0;
+  width: 100%;
 }
 
+/*.horiz-line {
+  border-top: 1px solid #505050;
+  height: 1px;
+  margin: 25px 0;
+  width: 88%;
+}
+
+.vert-line {
+  position: absolute;
+  border-left: 1px solid black;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  z-index: -10;
+}*/
 /*.info-row*/
