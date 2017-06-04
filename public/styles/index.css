@@ -40,10 +40,11 @@ main {
 }
 
 #nav-container {
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
   padding: 5px 0px;
-  margin-bottom: 15px;
   width: 60%;
 }
 
@@ -92,7 +93,7 @@ main {
 
 .option {
   color: #000;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
   font-family: opensans, Helvetica Neue, sans-serif;
   font-size: 0.9rem;
   text-decoration: none;
@@ -274,10 +275,26 @@ main {
     margin-top: 40px;
     width: 70%;
   }
+
+  #name-box .name {
+    font-size: 1.9rem;
+  }
+
+  #name-box .small {
+    font-size: 0.7rem;
+  }
 }
 
 /* MOBILE SCREENS */
 @media (max-device-width: 600px) {
+  main {
+    width: 70%;
+  }
+
+  #nav-container {
+    width: 70%;
+  }
+
   .overlay-box {
     align-items: center;
     display: flex;
@@ -325,17 +342,17 @@ main {
     flex-direction: column;
     justify-content: center;
     min-height: 70px;
-    margin: 10px;
+    margin-top: 35px;
     margin-bottom: 15px;
   }
 
   #name-box .name {
     display: block;
-    font-size: 5rem;
+    font-size: 4.8rem;
   }
 
   #name-box .small {
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: center;
   }
 
@@ -392,7 +409,7 @@ main {
 }
 
 /* SMALL SCREENS */
-@media (max-width: 360px) {
+@media (max-width: 425px) {
   #name-box .name {
     font-size: 1.4rem;
   }
