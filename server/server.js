@@ -8,7 +8,9 @@ app.disable('x-powered-by');
 
 const index = path.join(__dirname, '..', 'public');
 
-app.use(express.static(index));
+app.use(express.static(index, {
+  extensions: ['html']
+}));
 
 if (process.env.NODE_ENV !== 'production') {
   const morgan = require('morgan');
