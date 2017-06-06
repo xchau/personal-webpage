@@ -22,6 +22,7 @@ main, #nav-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 50px;
   min-height: 360px;
   position: relative;
 }
@@ -65,99 +66,31 @@ main, #nav-container {
 }
 
 #skills-container {
-  align-items: center;
+  align-items: flex-start;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   font-family: opensans-light, Helvetica Neue, sans-serif;
   font-size: 1rem;
-  min-height: 410px;
-  width: 100%;
-}
-
-#skills-content {
-  align-items: flex-start;
-  display: flex;
   justify-content: space-between;
-  min-height: 290px;
+  min-height: 280px;
   width: 100%;
-}
-
-#skills-container ul {
-  list-style: none;
-  line-height: 2;
-  margin: 0;
-  padding: 0;
 }
 
 #edu-container {
   align-items: center;
   display: flex;
-  flex-direction: column;
   font-family: opensans-light, Helvetica Neue, sans-serif;
   font-size: 1rem;
-  width: 100%;
-}
-
-#edu-content p {
-  text-align: center;
-}
-
-#edu-content {
-  border: 2px solid #c2c2c2;
-  border-radius: 5px;
-  display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
-  min-height: 210px;
-  padding: 20px 0;
+  margin-top: 15px;
+  min-height: 200px;
   width: 100%;
-}
-
-#uw {
-  background: url('../assets/img/uw.png');
-  background-size: cover;
-  height: 200px;
-  width: 200px;
-}
-
-#galvanize {
-  background: url('../assets/img/galvanize.png');
-  background-size: cover;
-  height: 200px;
-  width: 200px;
-}
-
-.section-header {
-  font-family: raleway, opensans-light, sans-serif;
-  font-size: 1.4rem;
-  margin: 24px 0;
-  text-align: center;
-  width: 35%;
 }
 
 .resume-icon {
   height: 1.2rem;
   margin-right: 10px;
   width: 1.2rem;
-}
-
-.four-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 15px 0;
-  min-height: 4rem;
-  width: 100%;
-}
-
-.three-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 15px 0;
-  min-height: 4rem;
-  width: 80%;
 }
 
 .tech {
@@ -183,8 +116,8 @@ main, #nav-container {
   border: 1px solid #ddd;
   border-radius: 3px;
   height: 14px;
-  margin-left: 10px;
-  width: 100%;
+  margin-left: 6px;
+  width: 90%;
 }
 
 .skill {
@@ -192,6 +125,10 @@ main, #nav-container {
   color: #fff;
   font-size: 0.7rem;
   text-align: center;
+}
+
+.skill:hover {
+  cursor: default;
 }
 
 .proficient {
@@ -270,6 +207,46 @@ main, #nav-container {
   background-size: cover;
 }
 
+.section-header {
+  display: flex;
+  height: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.horiz-first {
+  border-bottom: 1px solid #e75555;
+  font-family: raleway;
+  font-size: 1.3rem;
+  height: 30px;
+  /*margin-bottom: 20px;*/
+  /*text-align: ;*/
+  width: 15%;
+}
+
+.horiz-second {
+  border-bottom: 1px solid #323232;
+  height: 30px;
+  width: 85%;
+}
+
+.school-box {
+  align-items: center;
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 5px;
+  width: 200px;
+}
+
+.school {
+  height: 180px;
+  width: 180px;
+}
+
 @media (max-width: 1000px) {
   #summary-container {
     min-height: 320px;
@@ -312,19 +289,10 @@ main, #nav-container {
     width: 120px;
   }
 
-  #uw, #galvanize {
-    height: 150px;
-    width: 150px;
-  }
-
   .resume-icon {
     height: 0.7rem;
     margin-right: 8px;
     width: 0.7rem;
-  }
-
-  .section-header {
-    width: 150px;
   }
 }
 
@@ -340,8 +308,26 @@ main, #nav-container {
     width: 360px;
   }
 
-  #skills-content {
+  #skills-container {
+    min-height: 230px;
     width: 360px;
+  }
+
+  #cv-download {
+    height: 35px;
+  }
+
+  .section-header {
+    width: 360px;
+  }
+
+  .tech {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .skill {
+    font-size: 0.6rem;
   }
 }
 

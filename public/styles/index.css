@@ -21,6 +21,10 @@ html, body, main {
   width: 100%;
 }
 
+main {
+  height: 80%;
+}
+
 body {
   align-items: center;
   display: flex;
@@ -43,7 +47,7 @@ main {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  min-height: 52px;
   padding: 5px 0px;
   width: 60%;
 }
@@ -75,7 +79,7 @@ main {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  margin-top: 140px;
+  margin-top: 50px;
   width: 40%;
 }
 
@@ -147,7 +151,6 @@ main {
 	column-count: 4;
 	column-gap: 8px;
   list-style: none;
-  margin: 15px 0px;
   padding: 0;
 	width: 100%;
 }
