@@ -9,6 +9,8 @@ main, #nav-container {
 }
 
 #nav-container {
+  min-height: 52px;
+  max-height: 52px;
   margin-bottom: 15px;
 }
 
@@ -268,7 +270,12 @@ main, #nav-container {
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 810px) {
+  #nav-container {
+    min-height: 100px;
+    max-height: 100px;
+  }
+
   #summary-container {
     min-height: 280px;
   }
@@ -319,6 +326,12 @@ main, #nav-container {
 
   .section-header {
     width: 360px;
+  }
+
+  .horiz-first {
+    align-items: flex-end;
+    display: flex;
+    font-size: 1rem;
   }
 
   .tech {
