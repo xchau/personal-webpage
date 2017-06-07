@@ -452,6 +452,7 @@ main {
 
   .contact-logo {
     height: 0.5rem;
+    margin: 0;
     width: 0.5rem;
   }
 
