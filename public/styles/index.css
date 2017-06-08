@@ -325,8 +325,12 @@ main {
   }
 
   .contact-logo{
-    height: 3rem;
-    width: 3rem;
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+  }
+
+  .footer a {
+    font-size: 1.4rem;
   }
 }
 
