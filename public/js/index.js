@@ -147,9 +147,6 @@
   $.ajax({
     contentType: 'application/json',
     dataType: 'json',
-    // headers: {
-    //   'x-requested-with': 'origin'
-    // },
     type: 'get',
     url: 'http://cors-anywhere.herokuapp.com/https://xchau-pws.herokuapp.com/api/projects'
   })
