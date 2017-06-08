@@ -50,7 +50,7 @@
           contentType: 'application/json',
           dataType: 'json',
           type: 'get',
-          url: `https://xchau-pws.herokuapp.com/api/projects/${id}`
+          url: `http://cors-anywhere.herokuapp.com/https://xchau-pws.herokuapp.com/api/projects/${id}`
         })
         .then((project) => {
           console.log(project);
@@ -147,8 +147,11 @@
   $.ajax({
     contentType: 'application/json',
     dataType: 'json',
+    // headers: {
+    //   'x-requested-with': 'origin'
+    // },
     type: 'get',
-    url: 'https://xchau-pws.herokuapp.com/api/projects'
+    url: 'http://cors-anywhere.herokuapp.com/https://xchau-pws.herokuapp.com/api/projects'
   })
   .then((projects) => {
     const grid = document.querySelector('#portfolio-grid');
