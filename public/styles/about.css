@@ -270,6 +270,7 @@ h1 {
 p {
   font-family: opensans-light, sans-serif;
   font-size: .8rem;
+  line-height: 1.8;
 }
 
 .job-pic {
@@ -381,6 +382,14 @@ p {
   #summary-container {
     height: 280px;
     width: 360px;
+  }
+
+  #edu-container {
+    flex-direction: column;
+  }
+
+  .school-box {
+    min-height: 200px;
   }
 
   #skills-container {
