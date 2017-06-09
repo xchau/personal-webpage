@@ -68,6 +68,57 @@
   margin: 0px 8px;
 }
 
+@media (max-width: 800px) {
+  .modal-content {
+    height: 60%;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-desc {
+    font-size: 0.8rem;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-content {
+    height: 70%;
+    width: 60%;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-desc {
+    font-size: 0.8rem;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 250px) {
+  .modal-content {
+    height: 80%;
+    width: 116px
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-desc {
+    font-size: 0.7rem;
+    line-height: 1.9;
+  }
+
+  .modal-tech {
+    font-size: 0.7rem;
+  }
+}
+
 @media (max-device-width: 600px) {
   .modal-content {
     margin: 20% auto;

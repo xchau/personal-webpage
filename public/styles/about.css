@@ -460,4 +460,8 @@ p {
   #cv-download {
     margin: 20px 0;
   }
+
+  .timeline-item::before {
+    font-size: 1.5rem;
+  }
 }
