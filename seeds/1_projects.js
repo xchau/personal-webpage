@@ -57,17 +57,17 @@ exports.seed = function(knex) {
       {
         id: 6,
         title: 'Group Randomizer',
-        img_name: 'group-randomizer-tn.png',
+        img_name: 'g-randomizer.png',
         img_size: 'size1',
         github: 'https://github.com/xchau/group-randomizer',
-        description: 'A quick project leveraging React.js. Splits a string of comma-separated names into specified number of groups.',
+        description: 'A quick project leveraging React.js. Splits a string of comma-separated names into specified number of groups. The purpose of this project was mainly to help me brush up on React and learn TDD patterns with Enzyme testing.',
         stack: 'React, JavaScript, Mocha, Chai, Enzyme',
         created_at: '2017-7-10 19:42:16.964-07',
         updated_at: new Date
       }, {
         id: 7,
-        title: 'Group Randomizer',
-        img_name: 'r-snake-tn.png',
+        title: 'React Snake',
+        img_name: 'r-snake.png',
         img_size: 'size1',
         github: 'https://github.com/xchau/xc-react-snake',
         description: 'Using a canvas element to manipulate pixel locations would be the easy way to create the classic arcade game Snake. I chose to leverage React\'s statefulness and quick rendering to create my version of Snake instead. Have fun!',
