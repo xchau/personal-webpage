@@ -31,6 +31,6 @@
     "nodemon": "^1.11.0"
   },
   "engines": {
-    "node": "DEV_VERSION"
+    "node": "^8.2.1"
   }
 }
